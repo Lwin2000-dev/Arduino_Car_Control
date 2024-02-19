@@ -1,0 +1,258 @@
+/* Main Button Class */
+.button {
+  display: block;
+  width: 46%;
+  height: 46%;
+  margin: 2%;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  box-shadow: 1px 0px 3px 1px rgba(0, 0, 0, 0.4), inset 0 0 0 1px #000;
+}
+.button::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background: #191919;
+  position: absolute;
+  border-radius: inherit;
+}
+
+.icon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-color {
+  fill: #4f46e5;
+}
+
+#center,
+#top,
+#bottom,
+#left,
+#right {
+  position: absolute;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  transform: rotate(-45deg);
+  color: #999;
+  z-index: 99999;
+  font-size: 2.5rem;
+}
+
+.center-button {
+  display: block;
+  height: 38%;
+  width: 38%;
+  position: absolute;
+  top: 31%;
+  left: 31%;
+  background: #212121;
+  border-radius: 50%;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.8);
+}
+
+#center {
+  top: 27%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#center .mileage-label {
+  font-size: 20px;
+  color: #14b8a6;
+}
+#center .mileage {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #2a272a;
+}
+
+.remote-container {
+  width: 300px;
+  height: 300px;
+  background: #191919;
+  border-radius: 50%;
+  padding: 20px;
+  transform: rotate(45deg);
+  box-shadow: inset -10px 0 12px -6px #111111, inset 12px 0 5px -6px #222222,
+    inset 0 0 0 10px #222222, inset 2px 0 4px 10px rgba(0, 0, 0, 0.4),
+    1px 0 4px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  margin: 5px auto;
+}
+
+/* Top - Button */
+
+.button.top {
+  border-radius: 100% 0 0 0;
+  background: -webkit-radial-gradient(
+    bottom right,
+    ellipse cover,
+    #212121 35%,
+    #292929 75%
+  );
+  transition: transform 0.3s ease;
+}
+.button.top::after {
+  bottom: 0;
+  right: 0;
+  box-shadow: inset 2px 1px 2px 0 rgba(0, 0, 0, 0.4), 10px 10px 0 10px #191919;
+  -webkit-transform: skew(-3deg, -3deg) scale(0.96);
+  -moz-transform: skew(-3deg, -3deg) scale(0.96);
+  transform: skew(-3deg, -3deg) scale(0.96);
+}
+
+#top {
+  top: 7%;
+  left: 22%;
+}
+
+.button.top:active {
+  background: -webkit-radial-gradient(
+    bottom right,
+    ellipse cover,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  background: radial-gradient(
+    ellipse cover at bottom right,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  transform: scale(0.95);
+}
+
+/* Bottom - Button */
+
+.button.bottom {
+  border-radius: 0 0 100% 0;
+  background: -webkit-radial-gradient(
+    top left,
+    ellipse cover,
+    #212121 35%,
+    #292929 75%
+  );
+  transition: transform 0.3s ease;
+}
+
+.button.bottom::after {
+  top: 0;
+  left: 0;
+  box-shadow: inset -2px -3px 2px -2px rgba(0, 0, 0, 0.4),
+    -10px -10px 0 10px #191919;
+  -webkit-transform: skew(-3deg, -3deg) scale(0.96);
+  -moz-transform: skew(-3deg, -3deg) scale(0.96);
+  transform: skew(-3deg, -3deg) scale(0.96);
+}
+
+#bottom {
+  top: 50%;
+  left: 64%;
+}
+
+.button.bottom:active {
+  background: -webkit-radial-gradient(
+    top left,
+    ellipse cover,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  background: radial-gradient(
+    ellipse cover at top left,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  transform: scale(0.95);
+}
+
+/* Left-button */
+
+.button.left {
+  border-radius: 0 0 0 100%;
+  background: -webkit-radial-gradient(
+    top right,
+    ellipse cover,
+    #212121 35%,
+    #292929 75%
+  );
+  transition: transform 0.3s ease;
+}
+
+.button.left::after {
+  top: 0;
+  right: 0;
+  box-shadow: inset 2px -1px 2px 0 rgba(0, 0, 0, 0.4), 10px -10px 0 10px #191919;
+  -webkit-transform: skew(3deg, 3deg) scale(0.96);
+  -moz-transform: skew(3deg, 3deg) scale(0.96);
+  transform: skew(3deg, 3deg) scale(0.96);
+}
+
+#left {
+  top: 48%;
+  left: 21%;
+}
+
+.button.left:active {
+  background: -webkit-radial-gradient(
+    top right,
+    ellipse cover,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  background: radial-gradient(
+    ellipse cover at top right,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  transform: scale(0.95);
+}
+
+/* Right-button */
+
+.button.right {
+  border-radius: 0 100% 0 0;
+  background: -webkit-radial-gradient(
+    bottom left,
+    ellipse cover,
+    #212121 35%,
+    #292929 75%
+  );
+  transition: transform 0.3s ease;
+}
+
+.button.right::after {
+  bottom: 0;
+  left: 0;
+  box-shadow: inset -2px 3px 2px -2px rgba(0, 0, 0, 0.4),
+    -10px 10px 0 10px #191919;
+  -webkit-transform: skew(3deg, 3deg) scale(0.96);
+  -moz-transform: skew(3deg, 3deg) scale(0.96);
+  transform: skew(3deg, 3deg) scale(0.96);
+}
+
+#right {
+  top: 7%;
+  left: 65%;
+}
+
+.button.right:active {
+  background: -webkit-radial-gradient(
+    bottom left,
+    ellipse cover,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  background: radial-gradient(
+    ellipse cover at bottom left,
+    #4f46e5 35%,
+    #292929 75%
+  );
+  transform: scale(0.95);
+}
